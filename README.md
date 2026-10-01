@@ -1,2 +1,186 @@
-# Lontz-Roadmap
-This is a interactive roadmap for the lontz's
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f1e8">
+    <title>Lontz & Coleman — Bespoke Journey Roadmap · Cruise Planners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand-lockup" href="#top" aria-label="ETA Foodie Journey by Cruise Planners"><span class="cruise-logo"><img src="https://www.cruiseplanners.com/images/cpcom/cruise-planners-no-tag-white-small.png" alt="Cruise Planners"></span><span class="brand-divider"></span><span class="eta-lockup"><strong>ETA FOODIE</strong><small>WHERE EVERY JOURNEY HAS A FLAVOR</small></span></a>
+      <nav class="main-nav" aria-label="Page sections">
+        <a href="#decisions">The call</a>
+        <a href="#itinerary">The route</a>
+        <a href="#hotels">Hotels</a>
+        <a href="#details">Trip details</a>
+      </nav>
+      <div class="top-actions">
+        <span class="save-indicator"><i></i><span id="saveStatus">Saved in this browser</span></span>
+        <button class="button button-dark" id="editToggle" type="button" aria-pressed="false" hidden>Advisor edit</button>
+      </div>
+    </header>
+    <div class="advisor-mode-note advisor-only"><span>ADVISOR WORKSPACE</span> Changes save only in this browser. Guest selections arrive separately by email.</div>
+
+    <main id="top">
+      <section class="intro content-width" aria-labelledby="pageTitle">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CRUISE PLANNERS · ETA FOODIE <span class="eyebrow-date">WHERE EVERY JOURNEY HAS A FLAVOR</span></p>
+          <h1 id="pageTitle">The long way<br>is the <em>lovely way.</em></h1>
+          <p class="intro-subtitle">The Swiss Alps by scenic rail, the Rhine by longship, and Iceland by land: one continuous, easy-moving journey, with a table waiting at every stop.</p>
+          <div class="guest-line"><span class="guest-initials">AL <b>·</b> FC</span><span>Annmarie Lontz & Frank Coleman</span><span class="separator-dot">·</span><span>Celebrating birthdays</span><span class="separator-dot">·</span><span>Booking 7723079</span></div>
+          <a class="text-link" href="#itinerary">Explore the journey <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="intro-image" role="img" aria-label="Mountain lake in the Swiss Alps">
+          <span class="image-caption"><span>46°30' N</span><span>THE ALPS, BY RAIL</span></span>
+          <span class="image-index">01 / 03</span>
+        </div>
+      </section>
+
+      <section class="call-strip" aria-label="Roadmap review meeting">
+        <div class="content-width call-strip-inner">
+          <div class="call-date"><span class="calendar-day">02</span><span><strong>Roadmap brainstorm</strong><small>Friday, October 2 · 1:00–2:30 PM Phoenix</small></span></div>
+          <div class="call-attendees"><span class="micro-label">AT THE TABLE</span><span>Triniti <b>·</b> Annmarie <b>·</b> Frank</span></div>
+          <a class="call-focus" href="#decisions"><span class="focus-number">04</span><span><strong>Decisions to make</strong><small>Settle these first</small></span><span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="overview content-width" aria-label="Roadmap status">
+        <div class="overview-heading"><span class="eyebrow">AT A GLANCE</span><span class="overview-note">A working plan, made together</span></div>
+        <div class="overview-grid">
+          <div class="overview-stat"><strong>03</strong><span>distinct chapters</span></div>
+          <div class="overview-stat"><strong>22</strong><span>stops named <small>2 still to place</small></span></div>
+          <div class="overview-stat"><strong>16</strong><span>book-ready items</span></div>
+          <div class="overview-stat"><strong>16</strong><span>items to research</span></div>
+          <div class="overview-stat"><strong>03</strong><span>Viking checks</span></div>
+          <div class="overview-stat overview-open"><strong>04</strong><span>client decisions <small>Today's conversation</small></span></div>
+        </div>
+      </section>
+
+      <section class="standards-section content-width" id="travel">
+        <div class="section-heading standards-heading">
+          <div><p class="eyebrow">HOW YOU TRAVEL</p><h2>Every stop, <em>on your terms.</em></h2></div>
+          <p class="section-aside">The standards we’ll use to shape the details, not just the hotel list.</p>
+        </div>
+        <div class="standards-grid">
+          <article class="standard-item"><span>01</span><h3>Moving with ease</h3><p>Frank’s mobility comes first: light luggage, easy transfers, no hiking. Add a private car and driver wherever it smooths the day.</p></article>
+          <article class="standard-item"><span>02</span><h3>The table</h3><p>Dinner by 7 pm. Clean eating: local flavors in moderation, not a steady diet of heavy sauces, cream, cheese, or meat.</p></article>
+          <article class="standard-item"><span>03</span><h3>Where you stay</h3><p>Marriott Bonvoy Lifetime Gold, while staying open to comparable hotels. Look for breakfast included or a Club / Executive room, plus a king or two doubles.</p></article>
+          <article class="standard-item"><span>04</span><h3>Light & laundered</h3><p>SBB hotel-to-hotel luggage forwarding. Laundry is planned in Lausanne, aboard ship, and in Reykjavík.</p></article>
+          <article class="standard-item"><span>05</span><h3>Your air, your call</h3><p>Flights are being arranged through Viking. Confirm whether Amsterdam–Reykjavík and the homeward flight belong in that booking.</p></article>
+          <article class="standard-item"><span>06</span><h3>Chocolate & cheese</h3><p>Frank’s tastings and a hands-on cheese-making stop belong in the journey itself, with step-free access checked along the way.</p></article>
+        </div>
+      </section>
+
+      <section class="decisions-section" id="decisions">
+        <div class="content-width">
+          <div class="section-heading decisions-heading">
+            <div><p class="eyebrow">FIRST, THE BIG FOUR</p><h2>Shape the journey.</h2></div>
+            <p class="section-aside">Everything else hangs off these.<br>Choose a direction, or leave it open for now.</p>
+          </div>
+          <div class="decision-grid" id="decisionGrid"></div>
+          <div class="open-thread"><span class="thread-symbol">↗</span><p><strong>One small add, two lovely payoffs.</strong> Arrive in Zürich on Saturday instead of Sunday: a softer landing after the flight, plus Frank's Saturday-only chocolate walk.</p><label class="thread-control">Put it on the table <input type="checkbox" id="zurichOption"></label></div>
+          <form class="guest-submit" id="guestSubmission">
+            <div class="guest-submit-heading"><p class="eyebrow">YOUR JOURNEY, YOUR CHOICES</p><h3>Tell Triniti what feels right.</h3><p>Choose options above, shortlist a hotel, and add anything else you’d like us to know. Your selections won’t change the master roadmap until Triniti reviews them.</p></div>
+            <div class="guest-form-grid">
+              <label>Your name <input id="guestName" name="name" autocomplete="name" required placeholder="Annmarie and Frank"></label>
+              <label>Email for a copy <span class="field-optional">OPTIONAL</span><input id="guestEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+              <fieldset class="guest-choice-field"><legend>Hotel room setup</legend><span class="guest-field-hint">Preferred room configuration</span><div class="radio-options"><label><input type="radio" name="hotelBed" value="King"> King</label><label><input type="radio" name="hotelBed" value="Two doubles"> Two doubles</label><label><input type="radio" name="hotelBed" value="Flexible"> Flexible</label></div></fieldset>
+              <fieldset class="guest-choice-field"><legend>Viking stateroom</legend><span class="guest-field-hint">River rooms have a queen bed or split twins</span><div class="radio-options"><label><input type="radio" name="vikingBed" value="Queen"> Queen</label><label><input type="radio" name="vikingBed" value="Split twins"> Split twins</label><label><input type="radio" name="vikingBed" value="Discuss"> Discuss</label></div></fieldset>
+              <label class="guest-notes-label">Anything else for Triniti? <textarea id="guestNotes" name="notes" rows="4" placeholder="Questions, preferences, or something you’d like us to change…"></textarea></label>
+            </div>
+            <div class="guest-submit-actions"><button class="button button-dark guest-submit-button" type="submit">Review & email my choices</button><a id="downloadRequest" class="button button-outline download-request" hidden>Download request</a><p id="submissionStatus" role="status" aria-live="polite">This prepares an email to Triniti. Review it and press Send in your email app.</p></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="itinerary-section content-width" id="itinerary">
+        <div class="section-heading itinerary-heading">
+          <div><p class="eyebrow">THE ROUTE, SO FAR</p><h2>Three chapters.<br><em>One very good story.</em></h2></div>
+          <div class="route-heading-aside"><p>22 named stops across three legs. The brief mentions 24; two stops remain unplaced until we hear what feels right.</p><button class="button button-outline edit-only" id="addStopTop" type="button">+ Add a stop</button></div>
+        </div>
+        <div class="journey-rail" id="journeyRail"></div>
+      </section>
+
+      <section class="known-section" id="details">
+        <div class="content-width known-layout">
+          <div class="known-intro"><p class="eyebrow">ALREADY TAKEN CARE OF</p><h2>Good things,<br><em>already settled.</em></h2><p>These are in the plan. No need to spend call time reopening them.</p><a class="text-link" href="#callNotes">Go to call notes <span aria-hidden="true">↓</span></a></div>
+          <div class="known-list" id="knownList"></div>
+        </div>
+      </section>
+
+      <section class="hotel-section" id="hotels">
+        <div class="content-width">
+          <div class="section-heading hotel-heading">
+            <div><p class="eyebrow">STAYS, BY STOP</p><h2>Find your kind<br>of <em>welcome.</em></h2></div>
+            <p class="section-aside">Compare the feel, location, room fit, and Bonvoy value. Choose one hotel for each overnight that has options.</p>
+          </div>
+          <div class="bonvoy-note"><span class="bonvoy-note-mark">B</span><p><strong>Lifetime Gold, accurately.</strong> Zürich Marriott and The Reykjavík EDITION are the clear Bonvoy stays in this shortlist. Gold status does not by itself include lounge access or guaranteed breakfast; book a Zürich Executive-level rate that explicitly includes lounge access, and confirm that each Marriott rate qualifies for points and elite-night credit. <a href="https://www.marriott.com/loyalty/terms/default.mi" target="_blank" rel="noreferrer">Review program terms ↗</a></p></div>
+          <div class="hotel-grid" id="hotelGrid"></div>
+          <p class="hotel-footnote">Shortlist only, not a reservation or a 2027 availability check. Confirm the member's exact Bonvoy tier, qualifying booking channel, bed setup, step-free route and room features directly with each hotel before pricing.</p>
+        </div>
+      </section>
+
+      <section class="work-section content-width advisor-only">
+        <div class="section-heading"><div><p class="eyebrow">AFTER THE CALL</p><h2>Ready when you are.</h2></div><p class="section-aside">A first pass at the pricing homework. Refine it once dates and nights are settled.</p></div>
+        <div class="work-grid" id="workGrid"></div>
+      </section>
+
+      <section class="details-section content-width advisor-only">
+        <div class="confirm-panel">
+          <div class="section-heading compact"><div><p class="eyebrow">THREE CHECKS WITH VIKING</p><h2>Shipshape details.</h2></div><span class="small-counter" id="confirmCount">0 / 3 done</span></div>
+          <div id="confirmList" class="confirm-list"></div>
+          <div class="scenic-check"><label><input type="checkbox" id="scenicConfirmed"><span><strong>The scenic highlight day</strong><small>Rüdesheim & the Middle Rhine: confirm this is the day they most want to linger over.</small></span></label></div>
+        </div>
+        <div class="prep-panel">
+          <div class="section-heading compact"><div><p class="eyebrow">BEFORE THE CALL</p><h2>Set the table.</h2></div><span class="small-counter" id="prepCount">0 / 3 done</span></div>
+          <div id="prepList" class="prep-list"></div>
+          <div class="budget-fields">
+            <p class="eyebrow">BUDGET RANGE, BY LEG</p>
+            <label>Switzerland <input id="budgetAlpine" type="text" placeholder="Discuss on the call" aria-label="Switzerland budget range"></label>
+            <label>Rhine voyage <input id="budgetRhine" type="text" placeholder="Discuss on the call" aria-label="Rhine voyage budget range"></label>
+            <label>Iceland <input id="budgetIceland" type="text" placeholder="Discuss on the call" aria-label="Iceland budget range"></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="notes-section content-width advisor-only" id="callNotes">
+        <div class="notes-heading"><p class="eyebrow">FRIDAY, OCTOBER 2 · LIVE NOTES</p><h2>Leave room for<br><em>the conversation.</em></h2><p>Your notes save automatically in this browser.</p></div>
+        <label class="notes-label" for="callNotesInput">CALL NOTES</label>
+        <textarea id="callNotesInput" placeholder="What matters most to them? What changed? What should we follow up on?" rows="7"></textarea>
+        <div class="notes-footer"><span id="noteSaveLabel">Autosaved locally</span><div class="data-actions"><button class="button button-outline" id="exportData" type="button">Export roadmap</button><button class="button button-outline" id="importDataButton" type="button">Import changes</button><input id="importData" type="file" accept="application/json,.json" hidden></div></div>
+      </section>
+
+      <footer class="site-footer"><div class="content-width footer-inner"><a class="brand-lockup footer-lockup" href="#top" aria-label="ETA Foodie Journey by Cruise Planners"><span class="cruise-logo"><img src="https://www.cruiseplanners.com/images/cpcom/cruise-planners-no-tag-white-small.png" alt="Cruise Planners"></span><span class="brand-divider"></span><span class="eta-lockup"><strong>ETA FOODIE</strong><small>WHERE EVERY JOURNEY HAS A FLAVOR</small></span></a><span class="footer-booking">Arizona Cruise & Travel <span>·</span> Curated by Triniti Hester <span>·</span> 602-626-3740 <span>·</span> <a href="mailto:T.hester@cruiseplanners.com">T.hester@cruiseplanners.com</a></span><div class="source-links"><a href="https://spurious-utahraptor-cfa.notion.site/Lontz-Coleman-Journey-Roadmap-c8f7e5a152474d8e9d64dc9da13b9e65" target="_blank" rel="noreferrer">Open roadmap in Notion ↗</a><a href="https://app.notion.com/p/Lontz-Coleman-accessible-Switzerland-Rhine-and-Iceland-master-brief-a59a6522b89f45e0bb25ed30e31e221b?source=copy_link" target="_blank" rel="noreferrer">Open master brief ↗</a></div></div></footer>
+    </main>
+
+    <dialog id="stopDialog" class="stop-dialog">
+      <form id="stopForm" method="dialog">
+        <div class="dialog-heading"><div><p class="eyebrow">THE JOURNEY</p><h2 id="dialogTitle">Add a stop</h2></div><button class="close-dialog" type="button" id="closeDialog" aria-label="Close">×</button></div>
+        <input type="hidden" id="stopId">
+        <label>Place or experience<input id="stopName" required maxlength="100" placeholder="e.g. Zürich"></label>
+        <label>Leg<select id="stopLeg"><option value="switzerland">Switzerland by Rail</option><option value="rhine">Viking Rhine Getaway</option><option value="iceland">Iceland by Land</option></select></label>
+        <label>Timing or note<input id="stopDetail" maxlength="180" placeholder="A short note for the itinerary"></label>
+        <div class="dialog-actions"><button class="button button-outline" type="button" id="deleteStop">Remove stop</button><button class="button button-dark" type="submit">Save stop</button></div>
+      </form>
+    </dialog>
+    <dialog id="hotelDialog" class="hotel-dialog" aria-labelledby="hotelDialogTitle">
+      <div class="hotel-dialog-content">
+        <div class="dialog-heading"><div><p class="eyebrow" id="hotelDialogMeta">HOTEL DETAILS</p><h2 id="hotelDialogTitle">Hotel name</h2></div><button class="close-dialog" type="button" id="closeHotelDialog" aria-label="Close hotel details">×</button></div>
+        <p class="hotel-dialog-summary" id="hotelDialogSummary"></p>
+        <div class="hotel-dialog-facts">
+          <section><p class="eyebrow">WHY THIS ONE</p><p id="hotelDialogWhy"></p></section>
+          <section><p class="eyebrow">WHAT TO WEIGH</p><p id="hotelDialogTradeoff"></p></section>
+          <section><p class="eyebrow">ROOM & GUEST FIT</p><p id="hotelDialogFit"></p></section>
+        </div>
+        <div class="hotel-dialog-actions"><a class="button button-outline" id="hotelOfficialLink" href="#" target="_blank" rel="noreferrer">Explore the hotel ↗</a><button class="button button-dark" type="button" id="chooseHotelFromDialog">Choose this hotel</button></div>
+      </div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
