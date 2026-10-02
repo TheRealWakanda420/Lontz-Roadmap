@@ -138,10 +138,12 @@ const defaultData = {
       number: "01",
       area: "Zürich",
       timing: "Arrival · 1 night, or add Saturday night",
-      note: "A second night makes room to reset after the flight and catch the Saturday chocolate walk.",
+      note: "A second night makes room to reset after the flight and catch the Saturday chocolate walk. I reviewed four. Courtyard Zurich North is the strongest value fit and still earns Bonvoy; Hotel Glockenhof is the strongest logistical fit, central with a lift.",
       options: [
-        { id: "zurich-marriott", name: "Zürich Marriott Hotel", type: "Bonvoy", role: "Original roadmap pick", detail: "Riverside and walkable to the old town, with a full-service feel at the start of the rail trip.", why: "The clearest fit if earning Bonvoy points matters and you want to stay near the river and old town.", tradeoff: "Lounge breakfast and evening bites require an Executive-level rate that includes access; Lifetime Gold alone does not include lounge access.", guestFit: "Request a king or two doubles. Confirm an accessible room and the exact Executive room benefits before booking.", url: "https://www.marriott.com/en-us/hotels/zrhdt-zurich-marriott-hotel/overview/" },
-        { id: "zurich-park-hyatt", name: "Park Hyatt Zürich", type: "Non-Bonvoy", role: "Original comparable alternative", detail: "A polished, high-end city alternative for a more independent stay experience.", why: "Choose it if the room, service, or breakfast-included offer feels like the better start, even without Marriott earning.", tradeoff: "No Bonvoy points or elite-night credit. Price the full stay against the Marriott Executive option, not just the base room.", guestFit: "Confirm king or twin availability, step-free room details, breakfast inclusion, and a comfortable station transfer.", url: "https://www.hyatt.com/park-hyatt/en-US/zurph-park-hyatt-zurich" }
+        { id: "zurich-marriott", tier: "balanced", name: "Zürich Marriott Hotel", type: "Bonvoy", role: "Original roadmap pick", detail: "Riverside and walkable to the old town, with a full-service feel at the start of the rail trip.", why: "The clearest fit if earning Bonvoy points matters and you want to stay near the river and old town.", tradeoff: "Lounge breakfast and evening bites require an Executive-level rate that includes access; Lifetime Gold alone does not include lounge access.", guestFit: "Request a king or two doubles. Confirm an accessible room and the exact Executive room benefits before booking.", url: "https://www.marriott.com/en-us/hotels/zrhdt-zurich-marriott-hotel/overview/" },
+        { id: "zurich-park-hyatt", tier: "splurge", name: "Park Hyatt Zürich", type: "Non-Bonvoy", role: "Original comparable alternative", detail: "A polished, high-end city alternative for a more independent stay experience.", why: "Choose it if the room, service, or breakfast-included offer feels like the better start, even without Marriott earning.", tradeoff: "No Bonvoy points or elite-night credit. Price the full stay against the Marriott Executive option, not just the base room.", guestFit: "Confirm king or twin availability, step-free room details, breakfast inclusion, and a comfortable station transfer.", url: "https://www.hyatt.com/park-hyatt/en-US/zurph-park-hyatt-zurich" },
+        { id: "zurich-courtyard-north", tier: "save", name: "Courtyard by Marriott Zurich North", type: "Bonvoy", role: "Value pick · earns Bonvoy", detail: "A modern Marriott in Oerlikon, a three-minute walk from Zürich Oerlikon station and about seven minutes by train from the main station.", why: "The clearest way to keep earning Bonvoy points while stepping well down from the Zürich Marriott's price. You are travelling by train anyway, so the short hop in suits this journey.", tradeoff: "A business-district hotel, not the river-and-old-town feel of the original pick, and it adds one short train ride with luggage on arrival day. A Bonvoy review site notes it has no executive lounge, so don't plan on lounge breakfast; price a breakfast-included rate.", guestFit: "Ask for a king or two doubles on a quiet floor. Confirm an accessible room, the step-free route from Oerlikon station, and what breakfast costs. SBB luggage forwarding or a private car smooths the arrival hop." },
+        { id: "zurich-glockenhof", tier: "balanced", name: "Hotel Glockenhof", type: "Non-Bonvoy", role: "Central, a notch below the Park Hyatt", detail: "A central hotel on Sihlstrasse, under ten minutes' walk from the main station and close to Bahnhofstrasse and the old town.", why: "A walkable, central stay with a lift, wheelchair-accessible rooms listed and a proper breakfast, so arrival day stays easy and the Saturday chocolate walk is close.", tradeoff: "No Bonvoy points or elite credit. Listings show a lift and accessible rooms but not which rooms, or how wide the lift is; confirm the step-free route from the station before pricing.", guestFit: "Request a king or two doubles on the quieter side. Confirm an accessible room, a breakfast-included rate, and a comfortable station transfer." }
       ]
     },
     {
@@ -149,10 +151,12 @@ const defaultData = {
       number: "02",
       area: "Lugano",
       timing: "1 night · lake stay between panoramic trains",
-      note: "Neither original lakefront candidate is a Bonvoy hotel; compare room access and transfer time to Caslano.",
+      note: "Neither original lakefront candidate is a Bonvoy hotel, and there is no Marriott in Lugano. I reviewed four. Hotel Federale is the strongest value and logistics fit: quiet, accessible, with a restaurant for an early dinner. The catch is the hill from the station. Compare room access and transfer time to Caslano.",
       options: [
-        { id: "lugano-splendide", name: "Hotel Splendide Royal", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "Lakefront grande-dame comfort with broad views across Lake Lugano.", why: "Pick the classic, polished lakefront stay if that grand-hotel feeling is part of the Swiss experience.", tradeoff: "No Marriott in Lugano, so this night will not earn Bonvoy points. Compare the breakfast-included rate and transfer timing.", guestFit: "The roadmap calls for step-free access and a lake-view king. Confirm both directly, plus the private car to Alprose in Caslano.", url: "https://www.splendide.ch/" },
-        { id: "lugano-villa-castagnola", name: "Villa Castagnola", type: "Non-Bonvoy", role: "Original alternative", detail: "An intimate lakeside villa atmosphere, still close to Lugano's city stops.", why: "Choose it for a quieter, more personal-feeling lake stay rather than the grand-dame style.", tradeoff: "Also non-Bonvoy. Check the exact room location and car transfer so the private setting stays convenient.", guestFit: "Confirm step-free access, a lake-view king, breakfast inclusion, and the Caslano transfer.", url: "https://www.villacastagnola.com/" }
+        { id: "lugano-splendide", tier: "splurge", name: "Hotel Splendide Royal", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "Lakefront grande-dame comfort with broad views across Lake Lugano.", why: "Pick the classic, polished lakefront stay if that grand-hotel feeling is part of the Swiss experience.", tradeoff: "No Marriott in Lugano, so this night will not earn Bonvoy points. Compare the breakfast-included rate and transfer timing.", guestFit: "The roadmap calls for step-free access and a lake-view king. Confirm both directly, plus the private car to Alprose in Caslano.", url: "https://www.splendide.ch/" },
+        { id: "lugano-villa-castagnola", tier: "splurge", name: "Villa Castagnola", type: "Non-Bonvoy", role: "Original alternative", detail: "An intimate lakeside villa atmosphere, still close to Lugano's city stops.", why: "Choose it for a quieter, more personal-feeling lake stay rather than the grand-dame style.", tradeoff: "Also non-Bonvoy. Check the exact room location and car transfer so the private setting stays convenient.", guestFit: "Confirm step-free access, a lake-view king, breakfast inclusion, and the Caslano transfer.", url: "https://www.villacastagnola.com/" },
+        { id: "lugano-federale", tier: "save", name: "Hotel Federale", type: "Non-Bonvoy", role: "Value pick · three minutes from the station", detail: "Family-run since 1923, in a quiet, leafy spot a three-minute walk from Lugano's station. Rooms were renovated in 2019 and 2023, and the San Lorenzo restaurant serves breakfast and dinner, on the terrace in warm months.", why: "Real hospitality at a gentler price: quiet rooms, air conditioning in all rooms, wheelchair access listed with Lugano Region, and a restaurant on site that makes an early dinner easy.", tradeoff: "The hotel sits partway up a hill, so the walk from the station is short but steep. Plan a taxi or a private transfer with luggage. It is not lakefront; a lake view isn't the point here.", guestFit: "Ask for a king or two doubles on the city side, which listings describe as quieter. Confirm the step-free route, breakfast and dinner timing, and the car to Caslano. Guests are listed as receiving free Ticino public transport." },
+        { id: "lugano-pestalozzi", tier: "save", name: "Hotel Pestalozzi Lugano", type: "Non-Bonvoy", role: "Value pick · central, near the lake", detail: "A central hotel on Piazza Indipendenza, steps from the lakeshore, with a lift, a restaurant serving Ticino and vegetarian dishes, and a small gym.", why: "A flat, central base for an easy evening stroll to the lake, with wheelchair-accessible rooms listed and a menu that suits clean eating.", tradeoff: "A simple, modest hotel without lakefront drama. Listings are unclear whether breakfast is included in every rate, so price it both ways. It is about 0.9 km from the station, so plan a short car or taxi hop.", guestFit: "Confirm an accessible king or twin room, breakfast included, and a quiet side. Guests are listed as receiving a free Ticino public-transport pass." }
       ]
     },
     {
@@ -160,10 +164,12 @@ const defaultData = {
       number: "03",
       area: "Pontresina",
       timing: "1 night · Engadine stop",
-      note: "Keep the distinctive alpine stay; there is no obvious Bonvoy replacement that preserves this location and character.",
+      note: "Keep the distinctive alpine stay; there is no obvious Bonvoy replacement that preserves this location and character. The value options keep the Pontresina rail base: Hotel Müller has a lift, breakfast and a free shuttle; Hotel Rosatsch offers a station pickup service.",
       options: [
-        { id: "pontresina-kronenhof", name: "Grand Hotel Kronenhof", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A landmark historic hotel with spa, gardens, and a restful alpine setting.", why: "Best aligned with the planned Pontresina overnight and a quiet pause before the Glacier Express.", tradeoff: "Non-Bonvoy. Keep the hotel in Pontresina to avoid changing the rail base just to stay in St. Moritz.", guestFit: "The roadmap describes this stay as step-free. Confirm the specific room, lift route, and breakfast rate.", url: "https://www.kronenhof.com/" },
-        { id: "pontresina-badrutt", name: "Badrutt's Palace", type: "Non-Bonvoy", role: "Nearby alternative · St. Moritz", detail: "A grand luxury alternative in nearby St. Moritz rather than Pontresina.", why: "Consider it if the St. Moritz setting and hotel experience are more compelling than staying in Pontresina.", tradeoff: "Changing towns adds transfer and timing questions around the Glacier Express departure; it is not a like-for-like swap.", guestFit: "Confirm step-free room details, breakfast, and the transfer to the planned train before considering the change.", url: "https://www.badruttspalace.com/" }
+        { id: "pontresina-kronenhof", tier: "splurge", name: "Grand Hotel Kronenhof", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A landmark historic hotel with spa, gardens, and a restful alpine setting.", why: "Best aligned with the planned Pontresina overnight and a quiet pause before the Glacier Express.", tradeoff: "Non-Bonvoy. Keep the hotel in Pontresina to avoid changing the rail base just to stay in St. Moritz.", guestFit: "The roadmap describes this stay as step-free. Confirm the specific room, lift route, and breakfast rate.", url: "https://www.kronenhof.com/" },
+        { id: "pontresina-badrutt", tier: "splurge", name: "Badrutt's Palace", type: "Non-Bonvoy", role: "Nearby alternative · St. Moritz", detail: "A grand luxury alternative in nearby St. Moritz rather than Pontresina.", why: "Consider it if the St. Moritz setting and hotel experience are more compelling than staying in Pontresina.", tradeoff: "Changing towns adds transfer and timing questions around the Glacier Express departure; it is not a like-for-like swap.", guestFit: "Confirm step-free room details, breakfast, and the transfer to the planned train before considering the change.", url: "https://www.badruttspalace.com/" },
+        { id: "pontresina-mueller", tier: "save", name: "Hotel Müller Mountain Lodge", type: "Non-Bonvoy", role: "Value pick · lift and free shuttle", detail: "A 23-room lodge in Pontresina with a spa and a restaurant, a lift to the upper floors, and breakfast included.", why: "The practical way to keep the Pontresina night: breakfast included, a lift, a free shuttle listed, and a smaller, quieter feel than the grand hotels.", tradeoff: "It is about a nine-minute walk from the station, so the shuttle matters, and it does not have the grounds or historic setting of the Kronenhof. Confirm the shuttle's timing against your Bernina Express arrival.", guestFit: "Request a king or two doubles. Confirm step-free access from the entrance, an accessible room, dinner timing, and the free shuttle." },
+        { id: "pontresina-rosatsch", tier: "balanced", name: "Hotel Rosatsch", type: "Non-Bonvoy", role: "Station-pickup pick", detail: "A Pontresina hotel with a spa and indoor pool, a breakfast buffet, and a train-station pickup service.", why: "A comfortable step down from the Kronenhof, with a lift, a pool for a restful evening, and a station shuttle that suits Frank's easy-transfer rule.", tradeoff: "Listings describe the station pickup as a pre-booked service that may carry a surcharge; without it the station is a nine-minute walk. It is larger than the Müller, so ask for a quiet room.", guestFit: "Confirm the lift route, a king or two doubles, pickup timing against your Bernina Express train, and breakfast included." }
       ]
     },
     {
@@ -171,10 +177,13 @@ const defaultData = {
       number: "04",
       area: "Lausanne",
       timing: "1 or 2 nights · depends on the call decision",
-      note: "Two nights buy time for Chillon and the Gruyère morning. Decide the stay before comparing final rates.",
+      note: "Two nights buy time for Chillon and the Gruyère morning. Decide the stay before comparing final rates. Value read: Hôtel de la Paix keeps a lake-view, accessible feel for less than the palaces. Moxy Lausanne City and AC Hotel Bulle both earn Bonvoy at a lower price, with real caveats. The Bulle option suits the Gruyère day if you swap one Lausanne night; keep one for laundry.",
       options: [
-        { id: "lausanne-beaurivage", name: "Beau-Rivage Palace · Ouchy", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A lakefront palace hotel with gardens and a spa, right on Lake Geneva.", why: "The most natural match for the recommended two-night pause, lakefront evenings, and laundry mid-journey.", tradeoff: "Non-Bonvoy and a quieter Ouchy location rather than central Lausanne. Compare the total two-night rate.", guestFit: "The roadmap specifies step-free access and lake-view rooms. Confirm breakfast, bed setup, and the route to transport.", url: "https://www.brp.ch/" },
-        { id: "lausanne-palace", name: "Lausanne Palace", type: "Non-Bonvoy", role: "Central alternative", detail: "A central Lausanne base if city access matters more than staying directly on the lake.", why: "Choose it for a more central location while keeping the two-night schedule for Chillon, Gruyère, and laundry.", tradeoff: "Not the Ouchy lakefront setting. Compare the room and breakfast package before trading away the lakeside stay.", guestFit: "Confirm step-free room details, king/twin setup, breakfast, and easy car pickup for excursions.", url: "https://www.lausanne-palace.ch/en/" }
+        { id: "lausanne-beaurivage", tier: "splurge", name: "Beau-Rivage Palace · Ouchy", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A lakefront palace hotel with gardens and a spa, right on Lake Geneva.", why: "The most natural match for the recommended two-night pause, lakefront evenings, and laundry mid-journey.", tradeoff: "Non-Bonvoy and a quieter Ouchy location rather than central Lausanne. Compare the total two-night rate.", guestFit: "The roadmap specifies step-free access and lake-view rooms. Confirm breakfast, bed setup, and the route to transport.", url: "https://www.brp.ch/" },
+        { id: "lausanne-palace", tier: "splurge", name: "Lausanne Palace", type: "Non-Bonvoy", role: "Central alternative", detail: "A central Lausanne base if city access matters more than staying directly on the lake.", why: "Choose it for a more central location while keeping the two-night schedule for Chillon, Gruyère, and laundry.", tradeoff: "Not the Ouchy lakefront setting. Compare the room and breakfast package before trading away the lakeside stay.", guestFit: "Confirm step-free room details, king/twin setup, breakfast, and easy car pickup for excursions.", url: "https://www.lausanne-palace.ch/en/" },
+        { id: "lausanne-paix", tier: "balanced", name: "Hôtel de la Paix", type: "Non-Bonvoy", role: "Lake-view step-down", detail: "A four-star hotel in central Lausanne with views toward Lake Geneva and the Alps, accessible rooms and a breakfast buffet.", why: "Central, calm and lake-facing without palace pricing, with wheelchair-accessible rooms and a lift listed, which keeps the two-night plan comfortable.", tradeoff: "It sits in the city rather than on the Ouchy waterfront, and Lausanne is hilly: expect about a ten-to-twelve-minute walk from the station, so plan a taxi. Not Bonvoy.", guestFit: "Request a lake-side king or two doubles. Confirm the accessible-room route, breakfast, and car pickup for the Gruyère day." },
+        { id: "lausanne-moxy", tier: "save", name: "Moxy Lausanne City", type: "Bonvoy", role: "Bonvoy value · with caveats", detail: "Marriott's playful Moxy, in the lively Flon district about 600 metres from the station, with a metro stop 100 metres away and 113 compact rooms.", why: "The most affordable way to earn Bonvoy nights in Lausanne, with easy metro links to Ouchy and the station.", tradeoff: "The least natural fit for this trip: compact rooms, a lively nightlife area, hills between the station and the hotel, and breakfast that is not always included. Treat it as a budget valve, not a first choice.", guestFit: "Ask about a king room and the quietest floor. Confirm the step-free route from the metro, the lift, and any breakfast package. Compact rooms can feel tight with luggage.", url: "https://www.marriott.com/en-us/hotels/gvaox-moxy-lausanne-city/overview/" },
+        { id: "lausanne-bulle", tier: "save", name: "AC Hotel by Marriott Bulle", type: "Bonvoy", role: "Bonvoy value · Gruyère base", detail: "A new four-star AC Hotel in Bulle, in the heart of the Gruyère region: 120 rooms, a brasserie-style restaurant with a terrace, a lobby bar and underground parking. It opened on September 15, 2026.", why: "Puts you in the Gruyère region, where the cheese-making stop is, earns Bonvoy points, and Marriott lists rates from about CHF 111 a night (an opening-period figure, not checked for July 2027).", tradeoff: "A different shape of trip: you would swap one Lausanne night for a Gruyère night and drive between them. It is brand new with no track record, and Bulle is a working town, not a lake setting. Keep one Lausanne night for the laundry stop.", guestFit: "Needs a private car both ways. Confirm an accessible room, a king or two doubles, an early dinner on the terrace, and exactly what Gold status earns at this new hotel.", url: "https://www.marriott.com/en-us/hotels/gvabc-ac-hotel-bulle/overview/" }
       ]
     },
     {
@@ -182,9 +191,11 @@ const defaultData = {
       number: "05",
       area: "Bern",
       timing: "Only if they choose the overnight",
-      note: "This hotel is part of the Bern-versus-Basel decision; skip the Bern rate search if they press on to Basel.",
+      note: "This hotel is part of the Bern-versus-Basel decision; skip the Bern rate search if they press on to Basel. Value read: Hotel Savoy is the strongest value and logistics fit, three minutes from the station in the old town; its lift is narrow. Hotel Allegro is a roomier mid-priced alternative across the river.",
       options: [
-        { id: "bern-bellevue", name: "Bellevue Palace", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A grand central address with a terrace over the Aare, moments from Bern's arcades.", why: "It makes the recommended Bern overnight feel special while keeping the flat old town close and the next morning easy.", tradeoff: "Only relevant if you choose the Bern overnight; it is non-Bonvoy and the Saturday schedule is tighter than going straight to Basel.", guestFit: "The roadmap notes step-free access. Confirm breakfast and the preferred king/twin room setup.", url: "https://www.bellevue-palace.ch/" }
+        { id: "bern-bellevue", tier: "splurge", name: "Bellevue Palace", type: "Non-Bonvoy", role: "Original roadmap pick", detail: "A grand central address with a terrace over the Aare, moments from Bern's arcades.", why: "It makes the recommended Bern overnight feel special while keeping the flat old town close and the next morning easy.", tradeoff: "Only relevant if you choose the Bern overnight; it is non-Bonvoy and the Saturday schedule is tighter than going straight to Basel.", guestFit: "The roadmap notes step-free access. Confirm breakfast and the preferred king/twin room setup.", url: "https://www.bellevue-palace.ch/" },
+        { id: "bern-savoy", tier: "save", name: "Hotel Savoy Bern", type: "Non-Bonvoy", role: "Value pick · old town, near the station", detail: "A modern hotel in Bern's old town on Neuengasse, about three minutes' walk from the station and minutes from the arcades.", why: "The flat, central Bern night at a gentler price: station, arcades and a buffet breakfast within a few minutes, praised for its location and comfortable beds.", tradeoff: "Listings show a lift but a narrow one (about 79 cm door width), and one guest review calls it poor. Confirm it works for Frank's mobility and luggage. Not Bonvoy.", guestFit: "Request a king or two doubles. Ask about the accessible room, the lift width, and breakfast included." },
+        { id: "bern-allegro", tier: "balanced", name: "Hotel Allegro Bern", type: "Non-Bonvoy", role: "Views across the old town", detail: "A four-star superior hotel run by the Kursaal, across the Kornhaus bridge from the old town, with rooms facing the old town and the Bernese Alps.", why: "A comfortable mid-priced alternative to Bellevue Palace with big views, a lift and wheelchair-accessible facilities listed, and public transport about 100 metres away.", tradeoff: "It is across the river, so the old town is a short walk or tram ride rather than outside the door, and the room-by-room access detail we found is thin, so verify before relying on it.", guestFit: "Confirm an accessible king or twin, the route from tram or taxi, breakfast included, and a view-side room.", url: "https://www.kursaal-bern.ch/hotel-en" }
       ]
     },
     {
@@ -192,9 +203,11 @@ const defaultData = {
       number: "06",
       area: "Basel",
       timing: "Night before embarkation, if they skip Bern",
-      note: "The safer embarkation-eve plan. Favor an easy station or port transfer over chasing a status stay at the wrong end of town.",
+      note: "The safer embarkation-eve plan. Favor an easy station or port transfer over chasing a status stay at the wrong end of town. Bonvoy note: the Basel Marriott is the Bonvoy option the first shortlist missed, with an M Club lounge on a qualifying rate. Hotel Schweizerhof is the value pick beside the station.",
       options: [
-        { id: "basel-victoria", name: "Hotel Victoria", type: "Non-Bonvoy", role: "Station-side candidate", detail: "A station-side candidate for the safer Basel night before embarkation.", why: "Consider it only if you prefer to skip Bern and arrive in Basel the night before the ship.", tradeoff: "Not part of the original hotel shortlist and not Bonvoy; the Bern overnight remains the current recommendation.", guestFit: "Confirm step-free room details, breakfast, and the transfer to Viking's exact pier and check-in window.", url: "https://www.hotel-victoria.ch/" }
+        { id: "basel-victoria", tier: "balanced", name: "Hotel Victoria", type: "Non-Bonvoy", role: "Station-side candidate", detail: "A station-side candidate for the safer Basel night before embarkation.", why: "Consider it only if you prefer to skip Bern and arrive in Basel the night before the ship.", tradeoff: "Not part of the original hotel shortlist and not Bonvoy; the Bern overnight remains the current recommendation.", guestFit: "Confirm step-free room details, breakfast, and the transfer to Viking's exact pier and check-in window.", url: "https://www.hotel-victoria.ch/" },
+        { id: "basel-marriott", tier: "balanced", name: "Basel Marriott Hotel", type: "Bonvoy", role: "Bonvoy pick · M Club", detail: "Basel's only Marriott, fully renovated and reopened in late 2022. It connects to the Congress Center, sits within walking distance of the old town, and has an M Club lounge.", why: "The natural Bonvoy choice for the night before the ship: a reliable full-service Marriott, with an M Club rate for lounge breakfast. The first shortlist did not include a Bonvoy hotel in Basel; this one fills that gap.", tradeoff: "Gold status alone does not include the lounge, so price an M Club rate. It is in Kleinbasel by the exhibition grounds rather than the old town; confirm the transfer to Viking's pier and the check-in window.", guestFit: "Request a king or two doubles. Confirm an accessible room, the M Club rate and breakfast, and the tram or car transfer to the ship.", url: "https://www.marriott.com/en-us/hotels/bslmc-basel-marriott-hotel/overview/" },
+        { id: "basel-schweizerhof", tier: "save", name: "Hotel Schweizerhof Basel", type: "Non-Bonvoy", role: "Value pick · beside the station", detail: "A hotel family-owned for four generations, two minutes' walk from Basel SBB station, with a heritage breakfast buffet, a 24-hour hotel bar and free public transport with the BaselCard.", why: "The easiest arrival: a two-minute walk from the train, barrier-free rooms offered, and breakfast built in, at a gentle price.", tradeoff: "An 1864 building described as a little dated, with a narrow lift (about 79 cm) and no mini-fridge reported. No Bonvoy points.", guestFit: "Ask for a barrier-free king or twin. Confirm the lift route, breakfast included, and the transfer to Viking's pier; the BaselCard covers local trams.", url: "https://www.schweizerhof-basel.ch/" }
       ]
     },
     {
@@ -202,11 +215,12 @@ const defaultData = {
       number: "07",
       area: "Reykjavík",
       timing: "About 4 nights · confirm on the call",
-      note: "The end date depends on the night count; hold the hotel search until that decision is settled.",
+      note: "The end date depends on the night count; hold the hotel search until that decision is settled. Value read: Reykjavík is the priciest stop in July. Canopy by Hilton is the most thoroughly checked step down, with breakfast included and accessible rooms; outer-ring hotels save more but add taxi hops, so ask Triniti if you want them priced.",
       options: [
-        { id: "reykjavik-edition", name: "The Reykjavík EDITION", type: "Bonvoy", role: "Original roadmap pick", detail: "A harbor-front base with spa and dining, in the Marriott family.", why: "The strongest match if keeping the Bonvoy stay and a central harbour location matters most.", tradeoff: "Do not assume Gold includes breakfast or an upgrade. Compare room rate and confirmed benefits, not status hopes.", guestFit: "The roadmap calls for a king and step-free room. Confirm the exact room, breakfast package, and about-four-night dates.", url: "https://www.marriott.com/en-us/hotels/reykj-the-reykjavik-edition/overview/" },
-        { id: "reykjavik-retreat", name: "The Retreat at Blue Lagoon", type: "Non-Bonvoy", role: "Remote alternative", detail: "A destination stay immersed in the Blue Lagoon setting, outside central Reykjavík.", why: "Choose it if the geothermal retreat itself should be the main event rather than a city hotel base.", tradeoff: "It changes the touring plan and adds transfers to Reykjavík, the museum, and day trips; it is not a like-for-like swap.", guestFit: "Confirm accessible room and bathing access, breakfast, transport, and whether the full stay should move out of Reykjavík.", url: "https://www.bluelagoon.com/accommodation/retreat-hotel" },
-        { id: "reykjavik-borg", name: "Hótel Borg", type: "Non-Bonvoy", role: "Central alternative", detail: "A central Reykjavík alternative for a more city-focused stay.", why: "Compare it if a central location and a different hotel character matter more than Marriott points.", tradeoff: "No Bonvoy earning; verify total value and room details against the EDITION before choosing.", guestFit: "Confirm step-free room access, breakfast, and the king configuration directly.", url: "https://www.hotelborg.is/" }
+        { id: "reykjavik-edition", tier: "splurge", name: "The Reykjavík EDITION", type: "Bonvoy", role: "Original roadmap pick", detail: "A harbor-front base with spa and dining, in the Marriott family.", why: "The strongest match if keeping the Bonvoy stay and a central harbour location matters most.", tradeoff: "Do not assume Gold includes breakfast or an upgrade. Compare room rate and confirmed benefits, not status hopes.", guestFit: "The roadmap calls for a king and step-free room. Confirm the exact room, breakfast package, and about-four-night dates.", url: "https://www.marriott.com/en-us/hotels/reykj-the-reykjavik-edition/overview/" },
+        { id: "reykjavik-retreat", tier: "splurge", name: "The Retreat at Blue Lagoon", type: "Non-Bonvoy", role: "Remote alternative", detail: "A destination stay immersed in the Blue Lagoon setting, outside central Reykjavík.", why: "Choose it if the geothermal retreat itself should be the main event rather than a city hotel base.", tradeoff: "It changes the touring plan and adds transfers to Reykjavík, the museum, and day trips; it is not a like-for-like swap.", guestFit: "Confirm accessible room and bathing access, breakfast, transport, and whether the full stay should move out of Reykjavík.", url: "https://www.bluelagoon.com/accommodation/retreat-hotel" },
+        { id: "reykjavik-borg", tier: "balanced", name: "Hótel Borg", type: "Non-Bonvoy", role: "Central alternative", detail: "A central Reykjavík alternative for a more city-focused stay.", why: "Compare it if a central location and a different hotel character matter more than Marriott points.", tradeoff: "No Bonvoy earning; verify total value and room details against the EDITION before choosing.", guestFit: "Confirm step-free room access, breakfast, and the king configuration directly.", url: "https://www.hotelborg.is/" },
+        { id: "reykjavik-canopy", tier: "balanced", name: "Canopy by Hilton Reykjavik City Centre", type: "Non-Bonvoy", role: "Central step-down · breakfast included", detail: "A four-star hotel of six connected historic buildings, steps from Laugavegur, with 112 rooms, 12 accessible rooms and breakfast included in the rate.", why: "The most thoroughly checked step down from the EDITION: central, accessible rooms with roll-in showers described, a daily artisan breakfast included, and an on-site bistro and café; confirm dinner by 7 pm.", tradeoff: "A Hilton, not a Marriott, so no Bonvoy points or elite credit. Six connected older houses means the step-free route to your room is worth confirming, and so is a quiet room.", guestFit: "Request an accessible king room. Confirm the roll-in shower, the lift route, and breakfast included." }
       ]
     }
   ],
@@ -219,6 +233,22 @@ let data = loadData();
 let editMode = advisorMode;
 let toastTimeout;
 const hotelCarouselIndex = new Map();
+let hotelTierFilter = "all";
+const TIER_LABELS = { save: "Fine to save", balanced: "Balanced", splurge: "Worth the splurge" };
+
+function tierOf(hotel) { return hotel.tier || "balanced"; }
+
+// Which options to show for a stop under the current price-feel filter.
+function visibleOptions(stay) {
+  if (hotelTierFilter === "all") return stay.options;
+  const match = stay.options.filter((hotel) => tierOf(hotel) === hotelTierFilter);
+  return match.length ? match : stay.options;
+}
+
+// Official site when we have a verified one; otherwise a search for it.
+function hotelLink(hotel, stay) {
+  return hotel.url || "https://www.google.com/search?q=" + encodeURIComponent(hotel.name + " " + stay.area + " official site");
+}
 
 document.body.classList.toggle("advisor-mode", advisorMode);
 document.body.classList.toggle("edit-mode", advisorMode);
@@ -244,6 +274,11 @@ function mergeData(saved) {
     else if (merged[key] && typeof merged[key] === "object" && !Array.isArray(merged[key]) && saved[key] && typeof saved[key] === "object") merged[key] = { ...merged[key], ...saved[key] };
     else if (key in saved) merged[key] = saved[key];
   }
+  // Hotels are curated by Triniti, not edited in the browser: always use the current list,
+  // so returning visitors see new options. Keep only selections that still exist.
+  merged.hotels = structuredClone(defaultData.hotels);
+  merged.hotelSelections = (Array.isArray(saved.hotelSelections) ? saved.hotelSelections : [])
+    .filter((id) => merged.hotels.some((stay) => stay.options.some((hotel) => hotel.id === id)));
   const savedStops = (saved.legs || []).flatMap((leg) => leg.stops || []);
   for (const [id, update] of Object.entries(swissStopUpdates)) {
     const stop = merged.legs.flatMap((leg) => leg.stops).find((item) => item.id === id);
@@ -337,30 +372,34 @@ function renderWork() {
 
 function renderHotels() {
   document.querySelector("#hotelGrid").innerHTML = data.hotels.map((stay) => {
-    const chosenId = data.hotelSelections.find((id) => stay.options.some((hotel) => hotel.id === id));
+    const options = visibleOptions(stay);
+    const noMatch = hotelTierFilter !== "all" && !stay.options.some((hotel) => tierOf(hotel) === hotelTierFilter);
+    const chosenId = data.hotelSelections.find((id) => options.some((hotel) => hotel.id === id));
     const savedIndex = hotelCarouselIndex.get(stay.id);
-    const chosenIndex = stay.options.findIndex((hotel) => hotel.id === chosenId);
-    const activeIndex = Math.max(0, Math.min(savedIndex ?? (chosenIndex >= 0 ? chosenIndex : 0), stay.options.length - 1));
-    const hotel = stay.options[activeIndex];
+    const chosenIndex = options.findIndex((hotel) => hotel.id === chosenId);
+    const activeIndex = Math.max(0, Math.min(savedIndex ?? (chosenIndex >= 0 ? chosenIndex : 0), options.length - 1));
+    const hotel = options[activeIndex];
     const selected = chosenId === hotel.id;
+    const tier = tierOf(hotel);
     return `
       <section class="stay-group" aria-labelledby="stay-${escapeHtml(stay.id)}">
         <div class="stay-heading"><span class="stay-number">${escapeHtml(stay.number)}</span><div><h3 id="stay-${escapeHtml(stay.id)}">${escapeHtml(stay.area)}</h3><p>${escapeHtml(stay.timing)}</p></div></div>
         <p class="stay-note">${escapeHtml(stay.note)}</p>
+        ${noMatch ? `<p class="tier-empty">No “${escapeHtml(TIER_LABELS[hotelTierFilter])}” option for this stop yet, so every option is showing.</p>` : ""}
         <div class="hotel-carousel" aria-label="${escapeHtml(stay.area)} hotel choices">
-          <div class="hotel-carousel-header"><span class="eyebrow">COMPARE YOUR STAYS</span><div class="carousel-controls"><button type="button" data-hotel-step="-1" data-stay="${escapeHtml(stay.id)}" aria-label="Previous ${escapeHtml(stay.area)} hotel" ${activeIndex === 0 ? "disabled" : ""}>←</button><span aria-live="polite">${activeIndex + 1} of ${stay.options.length}</span><button type="button" data-hotel-step="1" data-stay="${escapeHtml(stay.id)}" aria-label="Next ${escapeHtml(stay.area)} hotel" ${activeIndex === stay.options.length - 1 ? "disabled" : ""}>→</button></div></div>
+          <div class="hotel-carousel-header"><span class="eyebrow">COMPARE YOUR STAYS</span><div class="carousel-controls"><button type="button" data-hotel-step="-1" data-stay="${escapeHtml(stay.id)}" aria-label="Previous ${escapeHtml(stay.area)} hotel" ${activeIndex === 0 ? "disabled" : ""}>←</button><span aria-live="polite">${activeIndex + 1} of ${options.length}</span><button type="button" data-hotel-step="1" data-stay="${escapeHtml(stay.id)}" aria-label="Next ${escapeHtml(stay.area)} hotel" ${activeIndex === options.length - 1 ? "disabled" : ""}>→</button></div></div>
           <article class="hotel-slide">
             <div class="hotel-poster hotel-poster-${escapeHtml(stay.id)}"><span class="hotel-poster-place">${escapeHtml(stay.area)} <i>·</i> ${escapeHtml(hotel.type)}</span><strong>${escapeHtml(hotel.name)}</strong><span class="hotel-poster-role">${escapeHtml(hotel.role)}</span></div>
             <div class="hotel-slide-copy">
-              <div class="hotel-option-top"><span class="hotel-type ${hotel.type === "Bonvoy" ? "bonvoy" : "independent"}">${escapeHtml(hotel.type)}</span><span class="hotel-role">${escapeHtml(hotel.role)}</span></div>
+              <div class="hotel-option-top"><span class="hotel-type ${hotel.type === "Bonvoy" ? "bonvoy" : "independent"}">${escapeHtml(hotel.type)}</span><span class="hotel-tier tier-${escapeHtml(tier)}">${escapeHtml(TIER_LABELS[tier])}</span><span class="hotel-role">${escapeHtml(hotel.role)}</span></div>
               <h4>${escapeHtml(hotel.name)}</h4>
               <p class="hotel-overview">${escapeHtml(hotel.detail)}</p>
               <div class="hotel-comparison"><section><h5>Why choose it</h5><p>${escapeHtml(hotel.why || hotel.detail)}</p></section><section><h5>What to weigh</h5><p>${escapeHtml(hotel.tradeoff || "Compare room, access, breakfast, location, and total price before deciding.")}</p></section></div>
               <p class="hotel-fit"><strong>For your stay:</strong> ${escapeHtml(hotel.guestFit || "Confirm the bed setup, step-free route, breakfast, and transfer details directly with the hotel.")}</p>
-              <div class="hotel-actions"><button type="button" class="hotel-details-button" data-hotel-details="${escapeHtml(hotel.id)}" data-stay="${escapeHtml(stay.id)}">More about this hotel</button><a href="${escapeHtml(hotel.url)}" target="_blank" rel="noreferrer">Explore official site ↗</a><button type="button" data-hotel-choice="${escapeHtml(hotel.id)}" data-stay="${escapeHtml(stay.id)}" aria-pressed="${selected}" class="hotel-shortlist${selected ? " selected" : ""}">${selected ? "Chosen for this stay ✓" : "Choose this hotel"}</button></div>
+              <div class="hotel-actions"><button type="button" class="hotel-details-button" data-hotel-details="${escapeHtml(hotel.id)}" data-stay="${escapeHtml(stay.id)}">More about this hotel</button><a href="${escapeHtml(hotelLink(hotel, stay))}" target="_blank" rel="noreferrer">${hotel.url ? "Explore official site ↗" : "Find the official site ↗"}</a><button type="button" data-hotel-choice="${escapeHtml(hotel.id)}" data-stay="${escapeHtml(stay.id)}" aria-pressed="${selected}" class="hotel-shortlist${selected ? " selected" : ""}">${selected ? "Chosen for this stay ✓" : "Choose this hotel"}</button></div>
             </div>
           </article>
-          ${stay.options.length > 1 ? `<div class="hotel-dots" role="group" aria-label="Choose a ${escapeHtml(stay.area)} hotel to compare">${stay.options.map((option, index) => `<button type="button" data-hotel-slide="${index}" data-stay="${escapeHtml(stay.id)}" aria-label="Show ${escapeHtml(option.name)}" aria-pressed="${activeIndex === index}">${index + 1}</button>`).join("")}</div>` : ""}
+          ${options.length > 1 ? `<div class="hotel-dots" role="group" aria-label="Choose a ${escapeHtml(stay.area)} hotel to compare">${options.map((option, index) => `<button type="button" data-hotel-slide="${index}" data-stay="${escapeHtml(stay.id)}" aria-label="Show ${escapeHtml(option.name)}" aria-pressed="${activeIndex === index}">${index + 1}</button>`).join("")}</div>` : ""}
         </div>
       </section>`;
   }).join("");
@@ -371,7 +410,7 @@ function chooseHotel(stayId, hotelId) {
   if (!stay || !stay.options.some((hotel) => hotel.id === hotelId)) return;
   data.hotelSelections = data.hotelSelections.filter((id) => !stay.options.some((hotel) => hotel.id === id));
   data.hotelSelections.push(hotelId);
-  hotelCarouselIndex.set(stayId, stay.options.findIndex((hotel) => hotel.id === hotelId));
+  hotelCarouselIndex.set(stayId, Math.max(0, visibleOptions(stay).findIndex((hotel) => hotel.id === hotelId)));
   saveData();
   renderHotels();
 }
@@ -380,13 +419,14 @@ function openHotelDetails(stayId, hotelId) {
   const stay = data.hotels.find((item) => item.id === stayId);
   const hotel = stay?.options.find((item) => item.id === hotelId);
   if (!stay || !hotel) return;
-  document.querySelector("#hotelDialogMeta").textContent = `${stay.area} · ${hotel.type} · ${stay.timing}`;
+  document.querySelector("#hotelDialogMeta").textContent = `${stay.area} · ${hotel.type} · ${TIER_LABELS[tierOf(hotel)]} · ${stay.timing}`;
   document.querySelector("#hotelDialogTitle").textContent = hotel.name;
   document.querySelector("#hotelDialogSummary").textContent = hotel.detail;
   document.querySelector("#hotelDialogWhy").textContent = hotel.why || hotel.detail;
   document.querySelector("#hotelDialogTradeoff").textContent = hotel.tradeoff || "Compare room, access, breakfast, location, and total price before deciding.";
   document.querySelector("#hotelDialogFit").textContent = hotel.guestFit || "Confirm the bed setup, step-free route, breakfast, and transfer details directly with the hotel.";
-  document.querySelector("#hotelOfficialLink").href = hotel.url;
+  document.querySelector("#hotelOfficialLink").href = hotelLink(hotel, stay);
+  document.querySelector("#hotelOfficialLink").textContent = hotel.url ? "Explore official site ↗" : "Find the official site ↗";
   const chooseButton = document.querySelector("#chooseHotelFromDialog");
   chooseButton.dataset.stay = stayId;
   chooseButton.dataset.hotel = hotelId;
@@ -483,10 +523,21 @@ document.querySelector("#hotelGrid").addEventListener("click", (event) => {
   if (stepButton) {
     const stay = data.hotels.find((item) => item.id === stepButton.dataset.stay);
     if (!stay) return;
-    const currentIndex = hotelCarouselIndex.get(stay.id) ?? Math.max(0, stay.options.findIndex((hotel) => data.hotelSelections.includes(hotel.id)));
-    hotelCarouselIndex.set(stay.id, Math.max(0, Math.min(currentIndex + Number(stepButton.dataset.hotelStep), stay.options.length - 1)));
+    const options = visibleOptions(stay);
+    const currentIndex = hotelCarouselIndex.get(stay.id) ?? Math.max(0, options.findIndex((hotel) => data.hotelSelections.includes(hotel.id)));
+    hotelCarouselIndex.set(stay.id, Math.max(0, Math.min(currentIndex + Number(stepButton.dataset.hotelStep), options.length - 1)));
     renderHotels();
   }
+});
+
+const tierFilter = document.querySelector("#tierFilter");
+if (tierFilter) tierFilter.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-tier-filter]");
+  if (!button) return;
+  hotelTierFilter = button.dataset.tierFilter;
+  hotelCarouselIndex.clear();
+  tierFilter.querySelectorAll("[data-tier-filter]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+  renderHotels();
 });
 
 document.querySelector("#closeHotelDialog").addEventListener("click", () => document.querySelector("#hotelDialog").close());
