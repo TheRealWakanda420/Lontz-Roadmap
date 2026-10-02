@@ -2,6 +2,43 @@ const advisorMode = new URLSearchParams(window.location.search).get("advisor") =
 const STORAGE_KEY = advisorMode ? "lontz-coleman-journey-v1" : "lontz-coleman-client-draft-v1";
 const ADVISOR_EMAIL = "T.hester@cruiseplanners.com";
 
+const swissStopUpdates = {
+  gotthard: {
+    previousDetail: "Train to Lucerne, paddle steamer to Flüelen, then panoramic rail to Lugano · about 5½ hours. Reserve seats; forward luggage hotel-to-hotel.",
+    detail: "Suggested Mon Jul 19 · Short train Zürich→Lucerne, paddle steamer Lucerne→Flüelen, then panoramic rail to Lugano · about 5½ hours. Seat reservation required (seasonal Apr–Oct). SBB hotel-to-hotel luggage forwarding keeps bags off transfers.",
+    previousStatus: "Research",
+    status: "To Book"
+  },
+  bernina: {
+    previousDetail: "Bus Lugano→Tirano, then the UNESCO rail line to Pontresina. Reserve seats. The classic bus does not include a Lake Como boat crossing.",
+    detail: "Suggested Tue Jul 20 · Bernina Express bus Lugano→Tirano, then the UNESCO rail line to Pontresina via the Brusio spiral viaduct. The bus passes Lake Como but includes no boat crossing. Reserve seats; if a boat is a must, price a custom Lugano→Menaggio connection before Tirano.",
+    previousStatus: "Research",
+    status: "To Book"
+  },
+  glacier: {
+    previousDetail: "St. Moritz→Brig for the scenic stretch, then mainline rail to Lausanne. Very limited Excellence seats; reserve as soon as 2027 inventory opens.",
+    detail: "Suggested Wed Jul 21 · Travel Pontresina→St. Moritz, then the Glacier Express to Brig; continue by mainline rail to Lausanne (~1¾ hours). Excellence Class has panoramic single seats, five-course dining and a dedicated concierge. Very limited seats; reserve as soon as 2027 inventory opens.",
+    previousStatus: "Research",
+    status: "To Book"
+  },
+  bern: {
+    previousDetail: "One night at Bellevue Palace recommended. Flat arcades and an easy morning train to Basel, about one hour.",
+    detail: "Arrive from Interlaken after the GoldenPass · one night at Bellevue Palace is recommended. Flat arcades and an easy morning train to Basel (~1 hour)."
+  },
+  goldenpass: {
+    previousDetail: "Montreux→Interlaken in Prestige, then train to Bern. Reserve seats; direct Lausanne→Bern is the simpler alternative.",
+    detail: "Suggested Fri Jul 23 · Train Lausanne→Montreux, then GoldenPass Express in Prestige to Interlaken; continue by train to Bern. Prestige seats rotate toward the views; reserve ahead. Simpler alternative: direct Lausanne→Bern (~1¼ hours).",
+    previousStatus: "Research",
+    status: "To Book"
+  },
+  basel: {
+    previousDetail: "Viking embarkation · July 24. If skipping Bern, arrive the night before and prearrange station-to-pier transfer.",
+    detail: "To Basel · Embarkation Sat Jul 24 · Morning train from Bern (~1 hour), then prearranged private transfer to the Viking pier. Confirm the embarkation window and arrange light-luggage assistance.",
+    previousStatus: "Confirm",
+    status: "To Book"
+  }
+};
+
 const defaultData = {
   legs: [
     {
@@ -15,15 +52,15 @@ const defaultData = {
       position: "center 55%",
       stops: [
         { id: "zurich", name: "Zürich", detail: "Private airport meet-and-greet. Optional Saturday second night for a reset and Frank's chocolate walk.", status: "Option" },
-        { id: "gotthard", name: "Gotthard Panorama Express", detail: "Train to Lucerne, paddle steamer to Flüelen, then panoramic rail to Lugano · about 5½ hours. Reserve seats; forward luggage hotel-to-hotel.", status: "Research" },
+        { id: "gotthard", name: "Gotthard Panorama Express", detail: swissStopUpdates.gotthard.detail, status: swissStopUpdates.gotthard.status },
         { id: "lugano", name: "Lugano", detail: "Splendide Royal or Villa Castagnola · step-free lake-view king to request. Private car to Alprose in Caslano.", status: "Research" },
-        { id: "bernina", name: "Bernina Express", detail: "Bus Lugano→Tirano, then the UNESCO rail line to Pontresina. Reserve seats. The classic bus does not include a Lake Como boat crossing.", status: "Research" },
+        { id: "bernina", name: "Bernina Express", detail: swissStopUpdates.bernina.detail, status: swissStopUpdates.bernina.status },
         { id: "pontresina", name: "Pontresina", detail: "Grand Hotel Kronenhof · restful, step-free base. Badrutt's Palace in St. Moritz is the alternative.", status: "Research" },
-        { id: "glacier", name: "Glacier Express · Excellence Class", detail: "St. Moritz→Brig for the scenic stretch, then mainline rail to Lausanne. Very limited Excellence seats; reserve as soon as 2027 inventory opens.", status: "Research" },
+        { id: "glacier", name: "Glacier Express · Excellence Class", detail: swissStopUpdates.glacier.detail, status: swissStopUpdates.glacier.status },
         { id: "lausanne", name: "Lausanne", detail: "Two nights recommended for the Olympic Museum, Chillon, Gruyère, and laundry. Beau-Rivage Palace in Ouchy; Lausanne Palace is central alternative.", status: "Decision" },
-        { id: "goldenpass", name: "GoldenPass · Prestige Class", detail: "Montreux→Interlaken in Prestige, then train to Bern. Reserve seats; direct Lausanne→Bern is the simpler alternative.", status: "Research" },
-        { id: "bern", name: "Bern", detail: "One night at Bellevue Palace recommended. Flat arcades and an easy morning train to Basel, about one hour.", status: "Decision" },
-        { id: "basel", name: "Basel", detail: "Viking embarkation · July 24. If skipping Bern, arrive the night before and prearrange station-to-pier transfer.", status: "Confirm" }
+        { id: "goldenpass", name: "GoldenPass · Prestige Class", detail: swissStopUpdates.goldenpass.detail, status: swissStopUpdates.goldenpass.status },
+        { id: "bern", name: "Bern", detail: swissStopUpdates.bern.detail, status: "Decision" },
+        { id: "basel", name: "Basel", detail: swissStopUpdates.basel.detail, status: swissStopUpdates.basel.status }
       ]
     },
     {
@@ -207,6 +244,14 @@ function mergeData(saved) {
     else if (merged[key] && typeof merged[key] === "object" && !Array.isArray(merged[key]) && saved[key] && typeof saved[key] === "object") merged[key] = { ...merged[key], ...saved[key] };
     else if (key in saved) merged[key] = saved[key];
   }
+  const savedStops = (saved.legs || []).flatMap((leg) => leg.stops || []);
+  for (const [id, update] of Object.entries(swissStopUpdates)) {
+    const stop = merged.legs.flatMap((leg) => leg.stops).find((item) => item.id === id);
+    const savedStop = savedStops.find((item) => item.id === id);
+    if (!stop || !savedStop) continue;
+    if (savedStop.detail === update.previousDetail) stop.detail = update.detail;
+    if (update.status && savedStop.status === update.previousStatus) stop.status = update.status;
+  }
   return merged;
 }
 
@@ -261,6 +306,7 @@ function renderLegs() {
       </div>
       <div class="leg-stops">
         <div class="leg-stops-header"><p>${escapeHtml(leg.note)}</p><span>${leg.stops.length} ${leg.stops.length === 1 ? "stop" : "stops"}</span></div>
+        ${leg.id === "switzerland" ? `<aside class="travel-pass-note" aria-labelledby="travelPassTitle"><h4 id="travelPassTitle">Swiss Travel Pass · a heads-up</h4><p>The pass covers the national network: trains, most lake boats, city trams and buses, plus free entry to 500+ museums, including the Olympic Museum and La Maison du Gruyère. For the Gotthard Panorama, Bernina, Glacier and GoldenPass routes, budget separately for required seat reservations and premium-class supplements such as Excellence and Prestige.</p><p><strong>Bottom line:</strong> It covers most of this route; scenic reservations and upgrades cost extra. Once the nights are set, we’ll compare a consecutive-day pass with point-to-point tickets. With this much scenic rail, it’s a strong contender.</p></aside>` : ""}
         ${leg.stops.length ? `<div class="stop-list">${leg.stops.map((stop, index) => `
           <div class="stop-row" data-stop-row="${escapeHtml(stop.id)}">
             <span class="stop-dot" aria-hidden="true"></span>
